@@ -1,0 +1,67 @@
+.btn {
+  font-family: 'Roboto', sans-serif;
+  display: inline-flex;
+  color: $white;
+  font-weight: 500;
+  transition: .3s ease-in-out;
+  font-size: 19.2px;
+  line-height: 23px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 1.875rem;
+
+  &--main {
+    background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
+  }
+
+  &--outline {
+    position: relative;
+    overflow:hidden;
+    z-index: 1;
+    &:before {
+      content:"";
+      z-index: -1;
+      display: block;
+      position: absolute;
+      inset: -3px;
+      background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
+    }
+    &:after {
+      content:"";
+      display: block;
+      position: absolute;
+      inset: 3px;
+      border-radius: 1.875rem;
+      z-index: -1;
+      background: $black;
+    }
+  }
+
+  &--small {
+    padding: .5rem 1.5rem;
+  }
+
+  &--capitalize {
+    text-transform: capitalize;
+  }
+
+  &:hover {
+    box-shadow: 0 0 13px 6px #3633d0;
+  }
+
+  &--subscribe {
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: 500;
+    font-size: 19.2px;
+    line-height: 23px;
+    background: linear-gradient(97.86deg, #89C6FF -38.38%, #3633D0 71.88%);
+    &--active {
+      box-shadow: none;
+      background: transparent;
+      border:3px solid #3633D0;
+    }
+  }
+}
